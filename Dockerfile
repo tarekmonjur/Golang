@@ -18,12 +18,14 @@ COPY . .
 
 EXPOSE 8080
 
-#RUN go build -o ./run .
+# RUN go build -o ./run .
 RUN go build
 
 FROM alpine
 WORKDIR /app
-COPY --from=builder /app/golang-learning .
+# COPY --from=builder /app/run .
+COPY --from=builder /app/golang .
 
 EXPOSE 8080
-CMD ["./golang-learning"]
+# CMD ["./run"]
+CMD ["./golang"]

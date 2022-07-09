@@ -8,7 +8,8 @@ services:
     image: golang-learning
     volumes:
       - .:/app
-    command: reflex -r '\.go$$' -s go run golang-learning
+    command: reflex -r '\.go$$' -s go run learning/golang
+    # command: reflex -r '\.go$$' -s go run ./run
     ports:
       - "5000:8080"
     environment:
