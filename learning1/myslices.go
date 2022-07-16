@@ -1,0 +1,34 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	fmt.Println("Welcome to the mySlices")
+	var fruitList = []string{}
+	fmt.Println("My fruit list init", len(fruitList))
+	fmt.Printf("Type of fruit list is %T", fruitList)
+
+	fruitList = append(fruitList, "Apple", "Mango", "Banana", "Orange")
+	fmt.Println("my fruit list is", fruitList)
+
+	fruitList = append(fruitList[1:])
+	fmt.Println("my fruit list now is", fruitList)
+
+	fruitList = append(fruitList[1:3])
+	fmt.Println("my new fruit list is", fruitList)
+
+	var scores = make([]int, 5)
+	scores[0] = 222
+	scores[1] = 555
+	scores[2] = 333
+	scores[3] = 444
+	scores[4] = 777
+	// scores[5] = 999
+	scores = append(scores, 999, 1000)
+	sort.Ints(scores)
+	fmt.Println("Score value is", scores)
+	fmt.Println(sort.IntsAreSorted(scores))
+}
