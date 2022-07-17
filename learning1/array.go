@@ -13,5 +13,14 @@ func main() {
 	fmt.Println("My fruit count is", len(fruitList))
 
 	var nameList = []string{"Muntasir", "Muntaha", "Tarek", "Monjur"}
+	nameList = append(nameList, "Nipu", "other")
 	fmt.Println("name list is", len(nameList))
+
+	for key, value := range nameList {
+		fmt.Println(key, value)
+	}
+
+	for i := 0; i < len(nameList); i++ {
+		fmt.Println(nameList[i])
+	}
 }

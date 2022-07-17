@@ -9,7 +9,7 @@ func main() {
 	fmt.Println("Welcome to the mySlices")
 	var fruitList = []string{}
 	fmt.Println("My fruit list init", len(fruitList))
-	fmt.Printf("Type of fruit list is %T", fruitList)
+	fmt.Printf("Type of fruit list is %T\n", fruitList)
 
 	fruitList = append(fruitList, "Apple", "Mango", "Banana", "Orange")
 	fmt.Println("my fruit list is", fruitList)
@@ -31,4 +31,15 @@ func main() {
 	sort.Ints(scores)
 	fmt.Println("Score value is", scores)
 	fmt.Println(sort.IntsAreSorted(scores))
+
+	for i := range scores {
+		fmt.Println(scores[i])
+	}
+
+	// remove item from slices
+	var courses = []string{"php", "javascript", "python", "java", "go"}
+	var index = 3
+	courses = append(courses[:index], courses[index+1:]...)
+	fmt.Println(courses)
+
 }
